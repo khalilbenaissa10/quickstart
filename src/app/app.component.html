@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Attirbute Directives</h1>
+<h2>ngClass / ngStyle</h2>
+<div [ngClass]="{border:true,background : true }"></div>
+<h2>Custom attirbute directives</h2>
+<div [Highlight]="'red'" [defaultColor]="'green'"> Some text</div>
+<h1>Structural Directives</h1>
+<h2>*ngIf</h2>
+<div *ngIf="switch">CONDITIONAL text</div>
+<template [ngIf]="switch">
+    <div>
+        conditionnal 2
+    </div>
+</template>
+<button (click)="onSwitch()">Baddel !</button>
+<hr>
+<h2>*ngFor</h2>
+<ul>
+    <li *ngFor="let item of items; let i =index">{{item}} - (index : {{i}})</li>
+</ul>
+<hr>
+<h2>Unless directive</h2>
+<div *unless="switch"> conditionnal text 3 </div>
+
+<h2>ngSwitch</h2>
+
